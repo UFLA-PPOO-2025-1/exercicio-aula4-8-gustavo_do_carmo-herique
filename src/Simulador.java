@@ -63,7 +63,6 @@ public class Simulador
         visoes.add(visao);
 
         visao = new VisaoDeTexto();
-        GeradorDePopulacoes.definirCores(visao);
         visoes.add(visao);
         
         // Configura um ponto de partida válido.
@@ -110,7 +109,7 @@ public class Simulador
         for(Iterator<Animal> it = animais.iterator(); it.hasNext(); ) {
             Animal animal = it.next();
             animal.agir(novosAnimais);
-            if(!animal.estaVivo()) {
+            if(!animal.estaAtivo()) {
                 it.remove();
             }
         }

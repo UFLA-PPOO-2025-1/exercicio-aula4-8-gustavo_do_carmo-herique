@@ -34,7 +34,7 @@ public class VisaoDeTexto implements VisaoSimulador {
     @Override
     public void mostrarStatus(int passo, Campo campo){
         reiniciar();
-        System.out.println("Passo " + passo + " - Raposas: " + estatisticas.obterContagemPopulacao(campo, Raposa.class) + " Coelhos: " + estatisticas.obterContagemPopulacao(campo, Coelho.class) );
+        System.out.println(estatisticas.obterDetalhesPopulacao(campo));
     }
     
     /**
